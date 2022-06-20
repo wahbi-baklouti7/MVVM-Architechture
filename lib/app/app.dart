@@ -5,11 +5,11 @@ import 'package:mvvm_architechture/presentation/resources/routes_manager.dart';
 class MyApp extends StatefulWidget {
 
   MyApp._internal();
-
+  
   static final _instance =MyApp._internal();
 
   factory MyApp()=>_instance;
-
+  int testvalue=0;
   @override
   State<MyApp> createState() => _MyAppState();
 }

@@ -16,6 +16,7 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  flutter_svg: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -35,11 +36,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/splash_logo.png
-
-
-
-
+    - assets/images/
 
   fonts:
     - family: Montserrat

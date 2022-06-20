@@ -4,46 +4,46 @@ import 'package:mvvm_architechture/presentation/resources/font_manager.dart';
 import 'package:mvvm_architechture/presentation/resources/style_manager.dart';
 import 'package:mvvm_architechture/presentation/resources/values_manager.dart';
 
-
-
-ThemeData getAppTheme(){
+ThemeData getAppTheme() {
   return ThemeData(
-
     // main colors
-      primaryColor: ColorManager.primary,
-      primaryColorLight: ColorManager.lightPrimary,
-      primaryColorDark: ColorManager.darkPrimary,
-      disabledColor: ColorManager.grey1,
-      
+    primaryColor: ColorManager.primary,
+    primaryColorLight: ColorManager.lightPrimary,
+    primaryColorDark: ColorManager.darkPrimary,
+    disabledColor: ColorManager.grey1,
+
     // app bar theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
+      backgroundColor: ColorManager.error,
       color: ColorManager.primary,
       elevation: AppSize.s4,
-      titleTextStyle: getRegularStyle(color: ColorManager.white,fontSize: FontSize.s16),
+      titleTextStyle:
+          getRegularStyle(color: ColorManager.white, fontSize: FontSize.s16),
       shadowColor: ColorManager.lightPrimary,
-
     ),
 
     // card  theme
-    cardTheme: CardTheme(color: ColorManager.white,elevation: AppSize.s4,shadowColor: ColorManager.grey),
+    cardTheme: CardTheme(
+        color: ColorManager.white,
+        elevation: AppSize.s4,
+        shadowColor: ColorManager.grey),
 
     // button theme
     buttonTheme: ButtonThemeData(
-      shape:const StadiumBorder(),
-      buttonColor: ColorManager.primary,
-      disabledColor: ColorManager.grey1,
-      splashColor: ColorManager.lightPrimary
-    ),
+        shape: const StadiumBorder(),
+        buttonColor: ColorManager.primary,
+        disabledColor: ColorManager.grey1,
+        splashColor: ColorManager.lightPrimary),
 
     // elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        primary: ColorManager.primary,
-        textStyle: getRegularStyle(color: ColorManager.white,fontSize: FontSize.s17),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSize.s12))
-      )
-    ),
+        style: ElevatedButton.styleFrom(
+            primary: ColorManager.primary,
+            textStyle: getRegularStyle(
+                color: ColorManager.white, fontSize: FontSize.s17),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(AppSize.s12)))),
 
     // text theme
     textTheme: TextTheme(
@@ -51,11 +51,12 @@ ThemeData getAppTheme(){
             getLightStyle(color: ColorManager.white, fontSize: FontSize.s22),
         headlineLarge: getSemiBoldStyle(
             color: ColorManager.darkGrey, fontSize: FontSize.s16),
-        titleMedium: getMediumStyle(
-            color: ColorManager.lightGrey, fontSize: FontSize.s14),
+        headlineMedium: getRegularStyle(
+            color: ColorManager.darkGrey, fontSize: FontSize.s14),
+        titleMedium:
+            getMediumStyle(color: ColorManager.primary, fontSize: FontSize.s16),
         bodyLarge: getRegularStyle(color: ColorManager.grey1),
         bodySmall: getRegularStyle(color: ColorManager.grey)),
-
 
     // text form field
     inputDecorationTheme: InputDecorationTheme(

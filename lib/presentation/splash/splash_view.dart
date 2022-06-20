@@ -34,7 +34,6 @@ class _SplashViewState extends State<SplashView> {
   @override
   void dispose() {
     _timer.cancel();
-    print("cancel timer");
     super.dispose();
   }
 
