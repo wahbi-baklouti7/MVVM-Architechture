@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mvvm_architechture/domain/models/on_boarding/on_boarding_model.dart';
+import 'package:mvvm_architechture/domain/models/on_boarding_model.dart';
 import 'package:mvvm_architechture/presentation/onboarding/view_model/onboarding_view_model.dart';
 import 'package:mvvm_architechture/presentation/resources/assets_manager.dart';
 import 'package:mvvm_architechture/presentation/resources/color_manager.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_architechture/app/di.dart';
 import 'package:mvvm_architechture/presentation/forgot_password/forgot_password_view.dart';
-import 'package:mvvm_architechture/presentation/login/login_view.dart';
+import 'package:mvvm_architechture/presentation/login/view/login_view.dart';
 import 'package:mvvm_architechture/presentation/main/main_view.dart';
 import 'package:mvvm_architechture/presentation/onboarding/view/onboarding_view.dart';
 import 'package:mvvm_architechture/presentation/register/register_view.dart';
@@ -24,6 +25,7 @@ class RouteGenerator {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.loginRoute:
+      initLoginModule();
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.registerRoute:
         return MaterialPageRoute(builder: (_) => const RegisterView());

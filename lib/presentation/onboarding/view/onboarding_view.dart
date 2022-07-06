@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mvvm_architechture/domain/models/on_boarding/on_boarding_model.dart';
+import 'package:mvvm_architechture/app/app_prefs.dart';
+import 'package:mvvm_architechture/app/di.dart';
+import 'package:mvvm_architechture/domain/models/on_boarding_model.dart';
 import 'package:mvvm_architechture/presentation/onboarding/view_model/onboarding_view_model.dart';
 import 'package:mvvm_architechture/presentation/onboarding/widgets/on_boarding_widgets.dart';
 import 'package:mvvm_architechture/presentation/resources/color_manager.dart';
@@ -17,6 +19,7 @@ class OnBoardingView extends StatefulWidget {
 
 class _OnBoardingViewState extends State<OnBoardingView> {
   final OnBoardingViewModel _onBoardingVM = OnBoardingViewModel();
+  
 
   void _bind() {
     _onBoardingVM.start();
@@ -56,6 +59,7 @@ class OnBoardingContent extends StatelessWidget {
   OnBoardingViewModel onBoardingViewModel;
   SliderViewObject sliderViewObject;
   final PageController _pageController = PageController();
+  final AppPreferences _appPreferences = instance<AppPreferences>();
 
   OnBoardingContent(
       {required this.sliderViewObject,
@@ -89,8 +93,11 @@ class OnBoardingContent extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () =>
-                  Navigator.pushReplacementNamed(context, Routes.loginRoute),
+              onPressed: () {
+              _appPreferences.setOnboardingViewed();
+              Navigator.pushReplacementNamed(context, Routes.loginRoute);
+              },
+                 
               child: Text(
                 AppString.skip,
                 textAlign: TextAlign.end,

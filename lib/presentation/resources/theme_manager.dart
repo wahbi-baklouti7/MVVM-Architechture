@@ -7,6 +7,7 @@ import 'package:mvvm_architechture/presentation/resources/values_manager.dart';
 ThemeData getAppTheme() {
   return ThemeData(
     // main colors
+
     primaryColor: ColorManager.primary,
     primaryColorLight: ColorManager.lightPrimary,
     primaryColorDark: ColorManager.darkPrimary,
@@ -15,7 +16,6 @@ ThemeData getAppTheme() {
     // app bar theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      backgroundColor: ColorManager.error,
       color: ColorManager.primary,
       elevation: AppSize.s4,
       titleTextStyle:
@@ -72,13 +72,13 @@ ThemeData getAppTheme() {
         // enabled border style
         enabledBorder: OutlineInputBorder(
             borderSide:
-                BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
+                BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
             borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
 
         // focused border style
         focusedBorder: OutlineInputBorder(
             borderSide:
-                BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
+                BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
             borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
 
         // error border style

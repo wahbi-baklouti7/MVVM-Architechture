@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:mvvm_architechture/domain/models/on_boarding/on_boarding_model.dart';
+import 'package:mvvm_architechture/domain/models/on_boarding_model.dart';
 import 'package:mvvm_architechture/presentation/base/base_view_model.dart';
 import 'package:mvvm_architechture/presentation/resources/assets_manager.dart';
 import 'package:mvvm_architechture/presentation/resources/string_manager.dart';
